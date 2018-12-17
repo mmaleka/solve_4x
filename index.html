@@ -40,7 +40,7 @@
         </div>
 
         <div class="col-12">
-          <input class="form-control equalition" type="text" placeholder="Enter Equation To Solve..." readonly>
+          <input class="form-control equalition" id="equation" type="text" placeholder="Enter Equation To Solve..." readonly>
         </div>
 
       </div>
@@ -53,13 +53,13 @@
         <div class="row justify-content-around">
 
           <div class="col-3">
-            <button type="button" class="btn btn-dark my-btn" onclick="sayHello()" > x<sup>2</sup> </button>
+            <button type="button" class="btn btn-dark my-btn" onclick="sayHello(btn='myBtn_x2')" id="myBtn_x2"> x<sup>2</sup> </button>
           </div>
           <div class="col-3">
-            <button type="button" class="btn btn-dark my-btn" onclick="sayHello()" > x </button>
+            <button type="button" class="btn btn-dark my-btn" onclick="sayHello(btn='myBtn_times')" id="myBtn_times"> x </button>
           </div>
           <div class="col-3">
-            <button type="button" class="btn btn-dark my-btn" onclick="sayHello()" > = </button>
+            <button type="button" class="btn btn-dark my-btn" onclick="sayHello(btn='myBtn_equal')" id="myBtn_equal" > = </button>
           </div>
 
         </div>
@@ -67,18 +67,40 @@
         <div class="row justify-content-around">
 
           <div class="col-3">
-            <button type="button" class="btn btn-dark my-btn" onclick="sayHello()" > + </button>
+            <button type="button" class="btn btn-dark my-btn" onclick="sayHello(btn='myBtn_plus')" id="myBtn_plus"> + </button>
           </div>
           <div class="col-3">
-            <button type="button" class="btn btn-dark my-btn" onclick="sayHello()" > - </button>
+            <button type="button" class="btn btn-dark my-btn" onclick="sayHello(btn='myBtn_minus')" id="myBtn_minus"> - </button>
           </div>
           <div class="col-3">
-            <button type="button" class="btn btn-dark my-btn" onclick="sayHello()" > c </button>
+            <button type="button" class="btn btn-dark my-btn" onclick="sayHello(btn='myBtn_c')" id="myBtn_c"> c </button>
           </div>
 
         </div>
 
       </div>
+
+
+
+      <!-- Modal here! -->
+      <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h5>Enter Number</h5>
+          <hr>
+          <div class="input-group operator-form">
+            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+            <div class="input-group-append">
+              <span class="input-group-text" id="btn-selected">...</span>
+            </div>
+          </div>
+          <button type="button" class="btn btn-dark" onclick="addSelection()" > Add </button>
+        </div>
+
+      </div>
+
 
 
     </div>
