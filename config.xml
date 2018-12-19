@@ -17,4 +17,8 @@
       Mpho Maleka
   </author>
 
+  <allow-navigation href="*" />
+  <allow-intent href="*" />
+  <access origin="*" />
+
 </widget>

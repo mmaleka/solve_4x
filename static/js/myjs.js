@@ -5,16 +5,11 @@ function sayHello(btn) {
   // Get the modal
   var modal = document.getElementById('myModal');
 
-  // Get the button that opens the modal
-  // var btn = document.getElementById(btn);
-
-  // // Get the <span> element that closes the modal
+  // Get the <span> element that closes the modal
   var span = document.getElementsByClassName("close")[0];
-  //
-  // // When the user clicks the button, open the modal
-  // btn.onclick = function() {
+
+  // When the user clicks the button, open the modal
    modal.style.display = "block";
-  // }
 
   var x = document.getElementById(btn).innerHTML;
   document.getElementById("btn-selected").innerHTML = x;
@@ -33,10 +28,20 @@ function sayHello(btn) {
   }
 }
 
+
+var equation = [];
+
 function addSelection() {
   console.log("Item selected");
-  var operator = document.getElementById("btn-selected").innerHTML;
-  console.log(operator);
-  var xx = document.getElementById("equation").innerHTML;
+  var operator1 = document.getElementById("btn-selected").innerHTML;
+  var operator2 = document.getElementById("number").value;
+  console.log("oper2", operator2);
+  equation.push(operator1);
+
+  var xx = document.getElementById("equation1").src;
   console.log(xx);
+  document.getElementById("equation1").src = "http://latex.codecogs.com/gif.latex?1+sin(x) $$ x^2 $$";
+
+
+  console.log(equation);
 }
